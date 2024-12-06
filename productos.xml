@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Productos>
+    <Producto>
+        <Codigo>23456</Codigo>
+        <Nombre>anillo</Nombre>
+        <Precio>12000.0</Precio>
+        <Categoria>seguridad</Categoria>
+        <Imagen>nn</Imagen>
+    </Producto>
+    <Producto>
+        <Codigo>34567890</Codigo>
+        <Nombre>sebas</Nombre>
+        <Precio>50000.0</Precio>
+        <Categoria>nada</Categoria>
+        <Imagen>nn</Imagen>
+    </Producto>
+</Productos>
