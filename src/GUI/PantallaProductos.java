@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PantallaProductos extends JFrame {
-    private List<Producto> productos; // Lista de productos
-    private JTable tablaProductos; // Tabla para mostrar productos
-    private DefaultTableModel modeloTabla; // Modelo de datos de la tabla
-    private XML xml; // DAO para manejar persistencia
+    private List<Producto> productos; 
+    private JTable tablaProductos; 
+    private DefaultTableModel modeloTabla; 
+    private XML xml; 
 
     public PantallaProductos() {
-        xml = new XML(); // Inicializar DAO
+        xml = new XML(); 
         configurarVentana();
         inicializarComponentes();
         cargarProductosDesdeXML();
@@ -33,7 +33,7 @@ public class PantallaProductos extends JFrame {
     }
 
     private void inicializarComponentes() {
-        productos = new ArrayList<>(); // Inicializar lista
+        productos = new ArrayList<>(); 
         setLayout(new BorderLayout());
 
         // Configurar tabla
@@ -82,14 +82,14 @@ public class PantallaProductos extends JFrame {
         dialogo.setLayout(new GridLayout(6, 2, 10, 10));
         dialogo.setLocationRelativeTo(this);
 
-        // Campos del formulario
+      
         JTextField txtCodigo = new JTextField();
         JTextField txtNombre = new JTextField();
         JTextField txtPrecio = new JTextField();
         JTextField txtCategoria = new JTextField();
         JTextField txtImagen = new JTextField();
 
-        // Botones
+   
         JButton btnGuardar = new JButton("Guardar");
         JButton btnCancelar = new JButton("Cancelar");
 
@@ -146,14 +146,14 @@ public class PantallaProductos extends JFrame {
             dialogo.setLayout(new GridLayout(6, 2, 10, 10));
             dialogo.setLocationRelativeTo(this);
 
-            // Campos del formulario con valores existentes
+  
             JTextField txtCodigo = new JTextField(producto.getCodigo());
             JTextField txtNombre = new JTextField(producto.getNombre());
             JTextField txtPrecio = new JTextField(String.valueOf(producto.getPrecio()));
             JTextField txtCategoria = new JTextField(producto.getCategoria());
             JTextField txtImagen = new JTextField(producto.getImagen());
 
-            // Botones
+
             JButton btnGuardar = new JButton("Guardar Cambios");
             JButton btnCancelar = new JButton("Cancelar");
 
@@ -182,14 +182,13 @@ public class PantallaProductos extends JFrame {
                         throw new IllegalArgumentException("Todos los campos son obligatorios.");
                     }
 
-                    // Actualizar el producto en la lista
+ 
                     producto.setCodigo(codigo);
                     producto.setNombre(nombre);
                     producto.setPrecio(precio);
                     producto.setCategoria(categoria);
                     producto.setImagen(imagen);
 
-                    // Actualizar la tabla
                     modeloTabla.setValueAt(codigo, filaSeleccionada, 0);
                     modeloTabla.setValueAt(nombre, filaSeleccionada, 1);
                     modeloTabla.setValueAt(precio, filaSeleccionada, 2);
@@ -216,7 +215,7 @@ public class PantallaProductos extends JFrame {
     private void eliminarProductoSeleccionado() {
         int filaSeleccionada = tablaProductos.getSelectedRow();
         if (filaSeleccionada >= 0) {
-            // Preguntar al usuario si está seguro de eliminar
+
             int confirm = JOptionPane.showConfirmDialog(
                     this,
                     "¿Está seguro de que desea eliminar este producto?",
@@ -225,7 +224,7 @@ public class PantallaProductos extends JFrame {
                     JOptionPane.WARNING_MESSAGE
             );
 
-            // Si el usuario confirma, eliminar el producto
+  
             if (confirm == JOptionPane.YES_OPTION) {
                 productos.remove(filaSeleccionada);
                 modeloTabla.removeRow(filaSeleccionada);

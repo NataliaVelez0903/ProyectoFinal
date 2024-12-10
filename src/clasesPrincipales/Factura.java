@@ -14,7 +14,7 @@ public class Factura {
     private double impuesto;
     private double total;
 
-    // Getters y setters
+
     public String getNombreCliente() {
         return nombreCliente;
     }

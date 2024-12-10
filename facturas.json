@@ -1,34 +1,50 @@
 [
   {
-    "nombreCliente": "Natalia Velez",
-    "identificacion": "1053775555",
-    "direccion": "calle 28",
+    "nombreCliente": "Natalia Velez Orjuela",
+    "identificacion": "121345678",
+    "direccion": "calle 11",
     "productosComprados": [
       {
-        "codigo": "23456",
-        "nombre": "candado",
-        "precio": 12000.0,
-        "categoria": "seguridad",
+        "codigo": "567890",
+        "nombre": "mouse",
+        "precio": 30000.0,
+        "categoria": "tecnología",
         "imagen": "nn"
       }
     ],
-    "impuesto": 2280.0,
-    "total": 14280.0
+    "impuesto": 5700.0,
+    "total": 35700.0
   },
   {
-    "nombreCliente": "sebastian",
-    "identificacion": "1234789",
-    "direccion": "callle 2",
+    "nombreCliente": "luis ",
+    "identificacion": "5678987654",
+    "direccion": "clalle 23",
     "productosComprados": [
       {
-        "codigo": "34567890",
-        "nombre": "sebas",
-        "precio": 50000.0,
-        "categoria": "nada",
+        "codigo": "12345678",
+        "nombre": "Arroz",
+        "precio": 10000.0,
+        "categoria": "comida",
         "imagen": "nn"
       }
     ],
-    "impuesto": 9500.0,
-    "total": 59500.0
+    "impuesto": 1900.0,
+    "total": 11900.0
+  },
+  {
+    "nombreCliente": "Fabiola ",
+    "identificacion": "1234567898754",
+    "direccion": "calle 1",
+    "productosComprados": [
+      {
+        "codigo": "3456787651",
+        "nombre": "victor Garcia",
+        "precio": 57000.0,
+        "categoria": "persona",
+        "imagen": "nn"
+      }
+    ],
+    "impuesto": 10830.0,
+    "total": 67830.0
   }
 ]
